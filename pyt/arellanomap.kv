@@ -1,0 +1,541 @@
+WindowManager:
+    MainWindow:
+    SelectScreen:
+    RHScreen:
+    FCHScreen:
+    PCHScreen:
+    PHScreen:
+    ABScreen:
+    LBScreen:
+    ABBScreen:
+    ESBScreen:
+
+<MainWindow>:
+    name: "main"
+
+    canvas:
+        Color: 
+            rgba: (0.1529, 0.6157, 0.9608, 0.8)
+        Rectangle: 
+            source: 'back.jfif'
+            size: root.width, root.height 
+            pos: self.pos
+    
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        padding: 20
+
+        Label:
+            text: "Arellano University Juan Sumulong Campus Map"
+            size_hint: .70, .10
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        
+        Image:
+            source: 'C:\\Users\\Axl\\Desktop\\pyt\\images\\gatearellano.png'
+            fit_mode: "cover"
+            size_hint: (None, None)
+            size: ("400dp", "300dp")
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+        Button:
+            text: "Check Buildings"
+            size_hint: .70, .30
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            background_color: (0.06, .36, .4, .675) 
+            font_size: 25
+            on_release: 
+                app.root.current = "select"
+                root.manager.transition.direction = "up"
+
+
+<SelectScreen>:
+    name: "select"
+
+    canvas:
+        Color: 
+            rgba: (0.1529, 0.6157, 0.9608, 0.8) 
+        Rectangle: 
+            source: 'back.jfif'
+            size: root.width, root.height 
+            pos: self.pos
+
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        padding: 20
+
+        Label:
+            text: "Buildings in Juan Sumulong Campus: "
+            size_hint: .70, .10
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        
+        Button: 
+            text: "Rizal Hall(RH)"
+            size_hint: .70, .30
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            background_color: (0.06, .36, .4, .675) 
+            font_size: 25
+            on_release: 
+                app.root.current = "rizal"
+                root.manager.transition.direction = "left"
+
+        Button: 
+            text: "Florentino Cayco Hall(FCH)"
+            size_hint: .70, .30
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            background_color: (0.06, .36, .4, .675) 
+            font_size: 25
+            on_release: 
+                app.root.current = "florentino"
+                root.manager.transition.direction = "left"
+
+        Button: 
+            text: "Paulino Cayco Hall(PCH)"
+            size_hint: .70, .30
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            background_color: (0.06, .36, .4, .675) 
+            font_size: 25
+            on_release: 
+                app.root.current = "paulino"
+                root.manager.transition.direction = "left"
+
+        Button: 
+            text: "Plaridel Hall(PH)"
+            size_hint: .70, .30
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            background_color: (0.06, .36, .4, .675) 
+            font_size: 25
+            on_release: 
+                app.root.current = "plaridel"
+                root.manager.transition.direction = "left"
+
+        Button: 
+            text: "Annex Building(AB)"
+            size_hint: .70, .30
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            background_color: (0.06, .36, .4, .675) 
+            font_size: 25
+            on_release: 
+                app.root.current = "annex"
+                root.manager.transition.direction = "left"
+
+        Button: 
+            text: "Lebron Building(LB)"
+            size_hint: .70, .30
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            background_color: (0.06, .36, .4, .675) 
+            font_size: 25
+            on_release: 
+                app.root.current = "lebron"
+                root.manager.transition.direction = "left"
+
+        Button: 
+            text: "Athletic Building(AB)"
+            size_hint: .70, .30
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            background_color: (0.06, .36, .4, .675) 
+            font_size: 25
+            on_release: 
+                app.root.current = "athletic"
+                root.manager.transition.direction = "left"
+
+        Button: 
+            text: "Elementary Building(ESB)"
+            size_hint: .70, .30
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            background_color: (0.06, .36, .4, .675) 
+            font_size: 25
+            on_release: 
+                app.root.current = "esb"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "Go back to Main Screen"
+            size_hint: .70, .30
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            background_color: (0.06, .36, .4, .675) 
+            font_size: 25
+            on_release: 
+                app.root.current = "main"
+                root.manager.transition.direction = "down"
+
+        Label: 
+            text:"Arellano Tanga"
+            size_hint: .70, .10
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+<RHScreen>:
+    name:"rizal"
+
+    canvas:
+        Color: 
+            rgba: (0.1529, 0.6157, 0.9608, 0.8) 
+        Rectangle: 
+            source: 'back.jfif'
+            size: root.width, root.height 
+            pos: self.pos
+
+    ActionBar:
+        size: root.width, 50
+        pos: 0, 650
+
+        ActionView:
+            ActionPrevious:
+                title: "Floors"
+                with_previous: False
+                app_icon: 'C:\\Users\\Axl\\Desktop\\pyt\\images\\arellanologo.png'
+
+            ActionButton:
+                text:"1st"
+
+            ActionButton:
+                text:"2nd" 
+
+            ActionButton:
+                text:"3rd" 
+
+            ActionButton:
+                text:"4th"  
+    
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'RHScreen'
+
+        Button:
+            text: 'Go back to Main'
+            size_hint: .5, None
+            pos_hint: {"center_x": .5}
+            on_release: 
+                app.root.current = "select"
+                root.manager.transition.direction = "right"
+
+<FCHScreen>:
+    name:"florentino"
+
+    canvas:
+        Color: 
+            rgba: (0.1529, 0.6157, 0.9608, 0.8) 
+        Rectangle: 
+            source: 'back.jfif'
+            size: root.width, root.height 
+            pos: self.pos 
+    
+    ActionBar:
+        size: root.width, 50
+        pos: 0, 650
+
+        ActionView:
+            ActionPrevious:
+                title: "Floors"
+                with_previous: False
+                app_icon: 'C:\\Users\\Axl\\Desktop\\pyt\\images\\arellanologo.png'
+
+            ActionButton:
+                text:"1st"
+
+            ActionButton:
+                text:"2nd" 
+
+            ActionButton:
+                text:"3rd" 
+
+            ActionButton:
+                text:"4th"
+
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'FCHScreen'
+
+        Button:
+            text: 'Go back to Main'
+            size_hint: .5, None
+            pos_hint: {"center_x": .5}
+            on_release: 
+                app.root.current = "select"
+                root.manager.transition.direction = "right"
+
+<PCHScreen>:
+    name:"paulino"
+
+    canvas:
+        Color: 
+            rgba: (0.1529, 0.6157, 0.9608, 0.8) 
+        Rectangle: 
+            source: 'back.jfif'
+            size: root.width, root.height 
+            pos: self.pos
+
+    ActionBar:
+        size: root.width, 50
+        pos: 0, 650
+
+        ActionView:
+            ActionPrevious:
+                title: "Floors"
+                with_previous: False
+                app_icon: 'C:\\Users\\Axl\\Desktop\\pyt\\images\\arellanologo.png'
+
+            ActionButton:
+                text:"1st"
+
+            ActionButton:
+                text:"2nd" 
+
+            ActionButton:
+                text:"3rd" 
+
+            ActionButton:
+                text:"4th"
+    
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'PCHScreen'
+
+        Button:
+            text: 'Go back to Main'
+            size_hint: .5, None
+            pos_hint: {"center_x": .5}
+            on_release: 
+                app.root.current = "select"
+                root.manager.transition.direction = "right"
+
+<PHScreen>:
+    name:"plaridel"
+
+    canvas:
+        Color: 
+            rgba: (0.1529, 0.6157, 0.9608, 0.8) 
+        Rectangle: 
+            source: 'back.jfif'
+            size: root.width, root.height 
+            pos: self.pos
+
+    ActionBar:
+        size: root.width, 50
+        pos: 0, 650
+
+        ActionView:
+            ActionPrevious:
+                title: "Floors"
+                with_previous: False
+                app_icon: 'C:\\Users\\Axl\\Desktop\\pyt\\images\\arellanologo.png'
+
+            ActionButton:
+                text:"1st"
+
+            ActionButton:
+                text:"2nd" 
+
+            ActionButton:
+                text:"3rd" 
+
+            ActionButton:
+                text:"4th"         
+    
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'PHScreen'
+
+        Button:
+            text: 'Go back to Main'
+            size_hint: .5, None
+            pos_hint: {"center_x": .5}
+            on_release: 
+                app.root.current = "select"
+                root.manager.transition.direction = "right"
+
+<ABScreen>:
+    name:"annex"
+
+    canvas:
+        Color: 
+            rgba: (0.1529, 0.6157, 0.9608, 0.8) 
+        Rectangle: 
+            source: 'back.jfif'
+            size: root.width, root.height 
+            pos: self.pos 
+    
+    ActionBar:
+        size: root.width, 50
+        pos: 0, 650
+
+        ActionView:
+            ActionPrevious:
+                title: "Floors"
+                with_previous: False
+                app_icon: 'C:\\Users\\Axl\\Desktop\\pyt\\images\\arellanologo.png'
+
+            ActionButton:
+                text:"1st"
+
+            ActionButton:
+                text:"2nd" 
+
+            ActionButton:
+                text:"3rd" 
+
+            ActionButton:
+                text:"4th"
+
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'ABScreen'
+
+        Button:
+            text: 'Go back to Main'
+            size_hint: .5, None
+            pos_hint: {"center_x": .5}
+            on_release: 
+                app.root.current = "select"
+                root.manager.transition.direction = "right"
+
+<LBScreen>:
+    name:"lebron"
+
+    canvas:
+        Color: 
+            rgba: (0.1529, 0.6157, 0.9608, 0.8) 
+        Rectangle: 
+            source: 'back.jfif'
+            size: root.width, root.height 
+            pos: self.pos 
+    
+    ActionBar:
+        size: root.width, 50
+        pos: 0, 650
+
+        ActionView:
+            ActionPrevious:
+                title: "Floors"
+                with_previous: False
+                app_icon: 'C:\\Users\\Axl\\Desktop\\pyt\\images\\arellanologo.png'
+
+            ActionButton:
+                text:"1st"
+
+            ActionButton:
+                text:"2nd" 
+
+            ActionButton:
+                text:"3rd" 
+
+            ActionButton:
+                text:"4th"
+
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'LBScreen'
+
+        Button:
+            text: 'Go back to Main'
+            size_hint: .5, None
+            pos_hint: {"center_x": .5}
+            on_release: 
+                app.root.current = "select"
+                root.manager.transition.direction = "right"
+
+<ABBScreen>:
+    name:"athletic"
+
+    canvas:
+        Color: 
+            rgba: (0.1529, 0.6157, 0.9608, 0.8) 
+        Rectangle: 
+            source: 'back.jfif'
+            size: root.width, root.height 
+            pos: self.pos 
+    
+    ActionBar:
+        size: root.width, 50
+        pos: 0, 650
+
+        ActionView:
+            ActionPrevious:
+                title: "Floors"
+                with_previous: False
+                app_icon: 'C:\\Users\\Axl\\Desktop\\pyt\\images\\arellanologo.png'
+
+            ActionButton:
+                text:"1st"
+
+            ActionButton:
+                text:"2nd" 
+
+            ActionButton:
+                text:"3rd" 
+
+            ActionButton:
+                text:"4th"
+
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'ABBScreen'
+
+        Button:
+            text: 'Go back to Main'
+            size_hint: .5, None
+            pos_hint: {"center_x": .5}
+            on_release: 
+                app.root.current = "select"
+                root.manager.transition.direction = "right"
+<ESBScreen>:
+    name:"esb"
+
+    canvas:
+        Color: 
+            rgba: (0.1529, 0.6157, 0.9608, 0.8) 
+        Rectangle: 
+            source: 'back.jfif'
+            size: root.width, root.height 
+            pos: self.pos 
+    
+    ActionBar:
+        size: root.width, 50
+        pos: 0, 650
+
+        ActionView:
+            ActionPrevious:
+                title: "Floors"
+                with_previous: False
+                app_icon: 'C:\\Users\\Axl\\Desktop\\pyt\\images\\arellanologo.png' 
+
+            ActionButton:
+                text:"1st"
+
+            ActionButton:
+                text:"2nd" 
+
+            ActionButton:
+                text:"3rd" 
+
+            ActionButton:
+                text:"4th"
+
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'ESBScreen'
+
+        Button:
+            text: 'Go back to Main'
+            size_hint: .5, None
+            pos_hint: {"center_x": .5}
+            on_release: 
+                app.root.current = "select"
+                root.manager.transition.direction = "right"
+
+
+    
+
+
+
+
+    
